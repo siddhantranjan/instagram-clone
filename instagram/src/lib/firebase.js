@@ -3,14 +3,15 @@ import 'firebase/firestore';
 import 'firebase/auth';
 
 // import { seedDatabase } from '../seed';
+import env from '../../env.local.json';
 
 const config = {
-  apiKey: 'AIzaSyAwqCSjVEDfAXf6N6NTSWX4sneY3-JDtQY',
-  authDomain: 'instagram-clone-learn.firebaseapp.com',
-  projectId: 'instagram-clone-learn',
-  storageBucket: 'instagram-clone-learn.appspot.com',
-  messagingSenderId: '682394923757',
-  appId: '1:682394923757:web:22ee58310409e1190552e4'
+  apiKey: env.apiKey,
+  authDomain: env.authDomain,
+  projectId: env.projectId,
+  storageBucket: env.storageBucket,
+  messagingSenderId: env.messagingSenderId,
+  appId: env.appId
 };
 
 const firebase = FireBase.initializeApp(config);
